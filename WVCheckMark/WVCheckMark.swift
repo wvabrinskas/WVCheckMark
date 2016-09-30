@@ -6,14 +6,13 @@
 //  Copyright © 2016 PAProjectDev. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-public class CheckMark: UIView {
-    private var lineWidth:CGFloat = 4.0
-    private var lineColor: CGColor = UIColor.green.cgColor
+open class WVCheckMark: UIView {
+    fileprivate var lineWidth:CGFloat = 4.0
+    fileprivate var lineColor: CGColor = UIColor.green.cgColor
     
-    private func createCheckmark(rect: CGRect) {
+    fileprivate func createCheckmark(rect: CGRect) {
         //checkmark animation
         let startCheck = CASpringAnimation(keyPath: "lineWidth")
         startCheck.damping = 10
@@ -39,7 +38,7 @@ public class CheckMark: UIView {
         self.layer.addSublayer(checkShape)
     }
     
-    private func creatCircle(rect: CGRect) {
+    fileprivate func creatCircle(rect: CGRect) {
         // Create Circle
         let rectShape = CAShapeLayer()
         rectShape.bounds = bounds
@@ -73,15 +72,15 @@ public class CheckMark: UIView {
         self.layer.addSublayer(rectShape)
     }
     
-    public func setColor(color: CGColor) {
+    open func setColor(color: CGColor) {
         lineColor = color
     }
     
-    public func setLineWidth(width: CGFloat) {
+    open func setLineWidth(width: CGFloat) {
         lineWidth = width
     }
     
-    public func start() {
+    open func start() {
         createCheckmark(rect: self.frame)
         creatCircle(rect: self.frame)
     }
