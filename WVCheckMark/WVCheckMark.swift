@@ -11,6 +11,12 @@ import UIKit
 open class WVCheckMark: UIView {
     fileprivate var lineWidth:CGFloat = 4.0
     fileprivate var lineColor: CGColor = UIColor.green.cgColor
+    fileprivate var originalRect: CGRect!
+    
+    override open func draw(_ rect: CGRect) {
+        super.draw(rect)
+        originalRect = rect
+    }
     
     fileprivate func createCheckmark(rect: CGRect) {
         //checkmark animation
@@ -81,7 +87,7 @@ open class WVCheckMark: UIView {
     }
     
     open func start() {
-        createCheckmark(rect: self.frame)
-        creatCircle(rect: self.frame)
+        createCheckmark(rect: originalRect)
+        creatCircle(rect: originalRect)
     }
 }
