@@ -12,11 +12,6 @@ import UIKit
 public class CheckMark: UIView {
     private var lineWidth:CGFloat = 4.0
     private var lineColor: CGColor = UIColor.green.cgColor
-    private var officialRect:CGRect!
-    override public func draw(_ rect: CGRect) {
-        super.draw(rect)
-        officialRect = rect
-    }
     
     private func createCheckmark(rect: CGRect) {
         //checkmark animation
@@ -87,7 +82,7 @@ public class CheckMark: UIView {
     }
     
     public func start() {
-        //createCheckmark(rect: officialRect)
-        //creatCircle(rect: officialRect)
+        createCheckmark(rect: self.frame)
+        creatCircle(rect: self.frame)
     }
 }
