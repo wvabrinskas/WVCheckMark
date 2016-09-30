@@ -87,7 +87,7 @@ public class CheckMark: UIView {
     }
     
     public func start() {
-        createCheckmark(rect: officialRect)
-        creatCircle(rect: officialRect)
+        //createCheckmark(rect: officialRect)
+        //creatCircle(rect: officialRect)
     }
 }
