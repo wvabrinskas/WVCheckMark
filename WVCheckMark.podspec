@@ -24,10 +24,9 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "Animated checkmark made with CoreAnimation."
 
-  s.homepage     = "http://github.com/wvabrinskas/WVCheckMark.git"
+  s.homepage     = "https://github.com/wvabrinskas/WVCheckMark.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -55,7 +54,7 @@ Pod::Spec.new do |s|
   s.author             = { "Wiliam Vabrinskas" => "wvabrinskas@gmail.com" }
   # Or just: s.author    = "Wiliam Vabrinskas"
   # s.authors            = { "Wiliam Vabrinskas" => "wvabrinskas@gmail.com" }
-  s.social_media_url   = "http://twitter.com/Wiliam Vabrinskas"
+  s.social_media_url   = "https://twitter.com/Wiliam Vabrinskas"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -79,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://github.com/wvabrinskas/WVCheckMark.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/wvabrinskas/WVCheckMark.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
