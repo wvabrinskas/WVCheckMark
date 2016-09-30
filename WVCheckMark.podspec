@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.framework = "UIKit"
-  s.source_files  = "WVCheckMark/**/*.{swift}"
+  s.source_files  = "WVCheckMark/*.{swift}"
 
   # s.public_header_files = "WVCheckMark/**/*.h"
 
