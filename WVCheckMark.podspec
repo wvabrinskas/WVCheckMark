@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "WVCheckMark", "WVCheckMark/**/*.{h,swift}"
-  s.exclude_files = "WVCheckMark/Exclude"
+  s.framework = "UIKit"
+  s.source_files  = "WVCheckMark/**/*.{swift}"
 
   # s.public_header_files = "WVCheckMark/**/*.h"
 
