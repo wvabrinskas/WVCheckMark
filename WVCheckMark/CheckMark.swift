@@ -85,8 +85,8 @@ public class CheckMark: UIView {
         lineWidth = width
     }
     
-    public func start(rect: CGRect) {
-        createCheckmark(rect: rect)
-        creatCircle(rect: rect)
+    public func start() {
+        createCheckmark(rect: self.frame)
+        creatCircle(rect: self.frame)
     }
 }
