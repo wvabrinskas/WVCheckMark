@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class WVCheckMark: UIView {
+public class CheckMark: UIView {
     private var lineWidth:CGFloat = 4.0
     private var lineColor: CGColor = UIColor.green.cgColor
     
