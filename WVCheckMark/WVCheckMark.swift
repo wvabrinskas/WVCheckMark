@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class WVCheckMark: UIView {
+public class WVCheckMark: UIView {
     private var lineWidth:CGFloat = 4.0
     private var lineColor: CGColor = UIColor.green.cgColor
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
     }
     
