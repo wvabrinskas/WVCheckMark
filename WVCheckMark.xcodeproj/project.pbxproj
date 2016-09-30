@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		A46BF24F1D9EEE6F00C13334 /* WVCheckMark.h in Headers */ = {isa = PBXBuildFile; fileRef = A46BF24D1D9EEE6F00C13334 /* WVCheckMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A46BF2561D9EEE8000C13334 /* WVCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46BF2551D9EEE8000C13334 /* WVCheckMark.swift */; };
+		A46BF2581D9F0CBC00C13334 /* WVCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46BF2571D9F0CBC00C13334 /* WVCheckMark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A46BF24A1D9EEE6F00C13334 /* WVCheckMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WVCheckMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46BF24D1D9EEE6F00C13334 /* WVCheckMark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WVCheckMark.h; sourceTree = "<group>"; };
 		A46BF24E1D9EEE6F00C13334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A46BF2551D9EEE8000C13334 /* WVCheckMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVCheckMark.swift; sourceTree = SOURCE_ROOT; };
+		A46BF2571D9F0CBC00C13334 /* WVCheckMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVCheckMark.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				A46BF24D1D9EEE6F00C13334 /* WVCheckMark.h */,
-				A46BF2551D9EEE8000C13334 /* WVCheckMark.swift */,
+				A46BF2571D9F0CBC00C13334 /* WVCheckMark.swift */,
 				A46BF24E1D9EEE6F00C13334 /* Info.plist */,
 			);
 			path = WVCheckMark;
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A46BF2561D9EEE8000C13334 /* WVCheckMark.swift in Sources */,
+				A46BF2581D9F0CBC00C13334 /* WVCheckMark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +302,7 @@
 				A46BF2541D9EEE6F00C13334 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
