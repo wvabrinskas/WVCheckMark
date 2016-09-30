@@ -15,8 +15,6 @@ class WVCheckMark: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        createCheckmark(rect: rect)
-        creatCircle(rect: rect)
     }
     
     private func createCheckmark(rect: CGRect) {
@@ -85,5 +83,10 @@ class WVCheckMark: UIView {
     
     public func setLineWidth(width: CGFloat) {
         lineWidth = width
+    }
+    
+    public func start(rect: CGRect) {
+        createCheckmark(rect: rect)
+        creatCircle(rect: rect)
     }
 }
