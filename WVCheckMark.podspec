@@ -17,14 +17,14 @@ Pod::Spec.new do |s|
 
   s.name         = "WVCheckMark"
   s.version      = "1.0.2"
-  s.summary      = "Animated checkmark made with CoreAnimation."
+  s.summary      = "Animated status indicators."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "Animated checkmark made with CoreAnimation."
+  s.description  = "Animated status indicators made with CoreAnimation and Swift 3.0."
 
   s.homepage     = "https://github.com/wvabrinskas/WVCheckMark.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   s.author             = { "Wiliam Vabrinskas" => "wvabrinskas@gmail.com" }
   # Or just: s.author    = "Wiliam Vabrinskas"
   # s.authors            = { "Wiliam Vabrinskas" => "wvabrinskas@gmail.com" }
-  s.social_media_url   = "https://twitter.com/Wiliam Vabrinskas"
+  s.social_media_url   = "https://twitter.com/william_vab"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
