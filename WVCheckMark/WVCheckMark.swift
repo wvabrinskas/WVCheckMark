@@ -20,15 +20,49 @@ open class WVCheckMark: UIView {
         originalRect = rect
     }
     
-    fileprivate func createCheckmark(rect: CGRect) {
+    fileprivate func springAnimation() -> CASpringAnimation {
         //checkmark animation
-        let startCheck = CASpringAnimation(keyPath: "lineWidth")
-        startCheck.damping = damping
-        startCheck.toValue = lineWidth
-        startCheck.duration = startCheck.settlingDuration
-        startCheck.repeatCount = 0
-        startCheck.fillMode = kCAFillModeBoth
-        startCheck.isRemovedOnCompletion = false
+        let spring = CASpringAnimation(keyPath: "lineWidth")
+        spring.damping = damping
+        spring.toValue = lineWidth
+        spring.duration = spring.settlingDuration
+        spring.repeatCount = 0
+        spring.fillMode = kCAFillModeBoth
+        spring.isRemovedOnCompletion = false
+        return spring
+    }
+    
+    fileprivate func createX(rect: CGRect) {
+        
+        creatCircle(rect: rect)
+        
+        let plusShapeLeft = CAShapeLayer()
+        plusShapeLeft.position = CGPoint(x: 0, y: 0)
+        plusShapeLeft.lineWidth = 0
+        plusShapeLeft.strokeColor = lineColor
+        let pathLeft = UIBezierPath()
+        pathLeft.move(to: CGPoint(x: rect.midX - 10, y: rect.midY - 10))
+        pathLeft.addLine(to: CGPoint(x: rect.midX + 10, y: rect.midY + 10))
+        plusShapeLeft.path = pathLeft.cgPath
+        plusShapeLeft.add(springAnimation(), forKey: nil)
+        
+        let plusShapeRight = CAShapeLayer()
+        plusShapeRight.position = CGPoint(x: 0, y: 0)
+        plusShapeRight.lineWidth = 0
+        plusShapeRight.strokeColor = lineColor
+        let pathRight = UIBezierPath()
+        pathRight.move(to: CGPoint(x: rect.midX + 10, y: rect.midY - 10))
+        pathRight.addLine(to: CGPoint(x: rect.midX - 10, y: rect.midY + 10))
+        plusShapeRight.path = pathRight.cgPath
+        plusShapeRight.add(springAnimation(), forKey: nil)
+        
+        self.layer.addSublayer(plusShapeRight)
+        self.layer.addSublayer(plusShapeLeft)
+        
+    }
+    
+    fileprivate func createCheckmark(rect: CGRect) {
+        creatCircle(rect: originalRect)
         
         //create checkmark
         let checkShape = CAShapeLayer()
@@ -40,7 +74,7 @@ open class WVCheckMark: UIView {
         checkShape.strokeStart = 0
         checkShape.strokeEnd = 0.36
         checkShape.setAffineTransform(CGAffineTransform(rotationAngle: 2.4))
-        checkShape.add(startCheck, forKey: nil)
+        checkShape.add(springAnimation(), forKey: nil)
         
         //add shapes to layer
         self.layer.addSublayer(checkShape)
@@ -104,6 +138,9 @@ open class WVCheckMark: UIView {
     }
     open func start() {
         createCheckmark(rect: originalRect)
-        creatCircle(rect: originalRect)
+    }
+    
+    open func startX() {
+        createX(rect: originalRect)
     }
 }
