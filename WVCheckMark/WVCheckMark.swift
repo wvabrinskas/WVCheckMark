@@ -30,8 +30,8 @@ open class WVCheckMark: UIView {
         
         //create checkmark
         let checkShape = CAShapeLayer()
-        checkShape.position = CGPoint(x: rect.midX + 15, y: rect.midY - 12)
-        checkShape.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 30, height: 30)).cgPath
+        checkShape.position = CGPoint(x: rect.midX + (rect.size.width * 0.25), y: rect.midY - (rect.size.height * 0.15))
+        checkShape.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: rect.size.width / 2, height: rect.size.height / 2)).cgPath
         checkShape.lineWidth = 0
         checkShape.fillColor = UIColor.clear.cgColor
         checkShape.strokeColor = lineColor
