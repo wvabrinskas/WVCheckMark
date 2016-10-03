@@ -4,7 +4,7 @@ Animated checkmark made with CoreAnimation and Swift 3.0
 ![](https://github.com/wvabrinskas/WVCheckMark/blob/master/gif/out.gif)
 
 # Installation
-* Simply install using Cocoapods, add `'pod WVCheckMark' :git => 'https://github.com/wvabrinskas/WVCheckMark.git'` to your podfile
+* Simply install using Cocoapods, add `'pod WVCheckMark'` to your podfile
 
 # Usage
 * `import WVCheckMark`
