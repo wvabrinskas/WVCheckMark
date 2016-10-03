@@ -11,6 +11,8 @@ import UIKit
 open class WVCheckMark: UIView {
     fileprivate var lineWidth:CGFloat = 4.0
     fileprivate var lineColor: CGColor = UIColor.green.cgColor
+    fileprivate var duration: CGFloat = 0.8
+    fileprivate var damping: CGFloat = 10
     fileprivate var originalRect: CGRect!
     
     override open func draw(_ rect: CGRect) {
@@ -21,7 +23,7 @@ open class WVCheckMark: UIView {
     fileprivate func createCheckmark(rect: CGRect) {
         //checkmark animation
         let startCheck = CASpringAnimation(keyPath: "lineWidth")
-        startCheck.damping = 10
+        startCheck.damping = damping
         startCheck.toValue = lineWidth
         startCheck.duration = startCheck.settlingDuration
         startCheck.repeatCount = 0
@@ -66,7 +68,7 @@ open class WVCheckMark: UIView {
         
         let group = CAAnimationGroup()
         group.animations = [end,start]
-        group.duration = 0.8
+        group.duration = CFTimeInterval(duration)
         group.autoreverses = false
         group.repeatCount = 0
         group.timingFunction = easeOut
@@ -78,6 +80,13 @@ open class WVCheckMark: UIView {
         self.layer.addSublayer(rectShape)
     }
     
+    open func set(color:CGColor, width: CGFloat, damping: CGFloat, duration: CGFloat) {
+        setColor(color: color)
+        setLineWidth(width: width)
+        setDamping(damp: damping)
+        setDuration(speed: duration)
+    }
+    
     open func setColor(color: CGColor) {
         lineColor = color
     }
@@ -86,6 +95,13 @@ open class WVCheckMark: UIView {
         lineWidth = width
     }
     
+    open func setDuration(speed: CGFloat) {
+        duration = speed
+    }
+    
+    open func setDamping(damp: CGFloat) {
+        damping = damp
+    }
     open func start() {
         createCheckmark(rect: originalRect)
         creatCircle(rect: originalRect)
