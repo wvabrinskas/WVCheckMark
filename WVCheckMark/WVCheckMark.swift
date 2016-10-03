@@ -137,10 +137,23 @@ open class WVCheckMark: UIView {
         damping = damp
     }
     open func start() {
+        clear()
         createCheckmark(rect: originalRect)
     }
     
     open func startX() {
+        clear()
         createX(rect: originalRect)
     }
+    
+    fileprivate func clear() {
+        if let t = self.layer.sublayers {
+            for l in t {
+                if l is CAShapeLayer {
+                    l.removeFromSuperlayer()
+                }
+            }
+        }
+    }
+    
 }
