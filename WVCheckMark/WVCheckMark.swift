@@ -147,15 +147,14 @@ open class WVCheckMark: UIView {
     }
     
     fileprivate func clear() {
-        DispatchQueue.main.async {
-            if let t = self.layer.sublayers {
-                for l in t {
-                    if l is CAShapeLayer {
-                        l.removeFromSuperlayer()
-                    }
+        if let t = self.layer.sublayers {
+            for l in t {
+                if l is CAShapeLayer {
+                    l.removeFromSuperlayer()
                 }
             }
         }
+        
     }
     
 }
