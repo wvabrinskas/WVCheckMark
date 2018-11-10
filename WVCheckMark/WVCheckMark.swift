@@ -11,6 +11,7 @@ import UIKit
 open class WVCheckMark: UIView {
     fileprivate var lineWidth:CGFloat = 4.0
     fileprivate var lineColor: CGColor = UIColor.green.cgColor
+    fileprivate var loadingLineColor: CGColor = UIColor.darkGray.cgColor
     fileprivate var duration: CGFloat = 0.8
     fileprivate var damping: CGFloat = 10
     fileprivate var originalRect: CGRect!
@@ -80,6 +81,39 @@ open class WVCheckMark: UIView {
         self.layer.addSublayer(checkShape)
     }
     
+    fileprivate func createStroke(rect: CGRect) {
+        let rectShape = CAShapeLayer()
+        rectShape.bounds = bounds
+        rectShape.position = CGPoint(x: rect.midX, y: rect.midY)
+        rectShape.cornerRadius = bounds.width / 2
+        rectShape.path = UIBezierPath(ovalIn: rect).cgPath
+        rectShape.lineWidth = lineWidth
+        rectShape.strokeColor = loadingLineColor
+        rectShape.fillColor = UIColor.clear.cgColor
+        rectShape.strokeStart = 0
+        rectShape.strokeEnd = 0
+        
+        let start = CABasicAnimation(keyPath: "strokeStart")
+        start.toValue = 1.0
+        start.beginTime = CFTimeInterval(duration / 2.0)
+        start.speed = 2.0
+        let end = CABasicAnimation(keyPath: "strokeEnd")
+        end.toValue = 1.0
+        
+        let group = CAAnimationGroup()
+        group.animations = [end,start]
+        group.duration = CFTimeInterval(duration)
+        group.autoreverses = false
+        group.repeatCount = .infinity
+        group.timingFunction = nil
+        group.fillMode = .both
+        group.isRemovedOnCompletion = false
+        rectShape.add(group, forKey: nil)
+        
+        //add shapes to layer
+        self.layer.addSublayer(rectShape)
+    }
+    
     fileprivate func creatCircle(rect: CGRect) {
         // Create Circle
         let rectShape = CAShapeLayer()
@@ -129,6 +163,10 @@ open class WVCheckMark: UIView {
         lineWidth = width
     }
     
+    open func setLoadingLineColor(color: CGColor) {
+        loadingLineColor = color
+    }
+    
     open func setDuration(speed: CGFloat) {
         duration = speed
     }
@@ -146,6 +184,11 @@ open class WVCheckMark: UIView {
         createX(rect: originalRect)
     }
     
+    open func startLoading() {
+        clear()
+        createStroke(rect: originalRect)
+    }
+    
     fileprivate func clear() {
         if let t = self.layer.sublayers {
             for l in t {
@@ -158,3 +201,4 @@ open class WVCheckMark: UIView {
     }
     
 }
+
