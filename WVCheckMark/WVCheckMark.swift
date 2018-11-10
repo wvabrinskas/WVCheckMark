@@ -27,7 +27,7 @@ open class WVCheckMark: UIView {
         spring.toValue = lineWidth
         spring.duration = spring.settlingDuration
         spring.repeatCount = 0
-        spring.fillMode = kCAFillModeBoth
+        spring.fillMode = .both
         spring.isRemovedOnCompletion = false
         return spring
     }
@@ -93,7 +93,7 @@ open class WVCheckMark: UIView {
         rectShape.strokeStart = 0
         rectShape.strokeEnd = 0
         
-        let easeOut = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        let easeOut = CAMediaTimingFunction(name: .easeOut)
         
         let start = CABasicAnimation(keyPath: "strokeStart")
         start.toValue = 0
@@ -106,7 +106,7 @@ open class WVCheckMark: UIView {
         group.autoreverses = false
         group.repeatCount = 0
         group.timingFunction = easeOut
-        group.fillMode = kCAFillModeBoth
+        group.fillMode = .both
         group.isRemovedOnCompletion = false
         rectShape.add(group, forKey: nil)
         
