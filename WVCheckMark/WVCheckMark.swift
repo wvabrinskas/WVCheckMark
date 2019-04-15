@@ -59,7 +59,6 @@ open class WVCheckMark: UIView {
         
         self.layer.addSublayer(plusShapeRight)
         self.layer.addSublayer(plusShapeLeft)
-        
     }
     
     fileprivate func createCheckmark(rect: CGRect) {
@@ -174,14 +173,25 @@ open class WVCheckMark: UIView {
     open func setDamping(damp: CGFloat) {
         damping = damp
     }
-    open func start() {
+    
+    open func start(completion: (() -> Void)? = nil) {
         clear()
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(completion)
+        
         createCheckmark(rect: originalRect)
+        CATransaction.commit()
     }
     
-    open func startX() {
+    open func startX(completion: (() -> Void)? = nil) {
         clear()
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(completion)
+        
         createX(rect: originalRect)
+        CATransaction.commit()
     }
     
     open func startLoading() {
