@@ -46,14 +46,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w94-9K-CVu">
+                                <rect key="frame" x="164" y="607" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="reload" destination="BYZ-38-t0r" eventType="touchUpInside" id="Suj-iO-WEX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oxE-nE-ENL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Rv-Z2-Czr"/>
                             <constraint firstItem="oxE-nE-ENL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Kkf-LX-2s5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w94-9K-CVu" secondAttribute="bottom" constant="30" id="NuR-nt-o7o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xoh-TG-r5f" secondAttribute="trailing" constant="8" id="U8T-OX-30X"/>
                             <constraint firstItem="xoh-TG-r5f" firstAttribute="top" secondItem="f2B-Hv-SaQ" secondAttribute="bottom" constant="8" id="aeg-PP-gie"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f2B-Hv-SaQ" secondAttribute="bottom" constant="200" id="bRH-YS-fOB"/>
+                            <constraint firstItem="w94-9K-CVu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="c1p-c1-x1I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w94-9K-CVu" secondAttribute="trailing" constant="164" id="iQC-mz-uiU"/>
                             <constraint firstItem="f2B-Hv-SaQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jBq-Un-Bag"/>
                             <constraint firstItem="oxE-nE-ENL" firstAttribute="top" secondItem="JXN-bp-gOo" secondAttribute="bottom" constant="10" id="on1-ei-m31"/>
                             <constraint firstItem="JXN-bp-gOo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ot1-oV-hA5"/>

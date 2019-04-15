@@ -10,23 +10,25 @@ import UIKit
 import WVCheckMark
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak private var checkView: WVCheckMark!
     @IBOutlet weak private var checkLabel: UILabel!
     
     @IBOutlet weak private var checkXView: WVCheckMark!
     @IBOutlet weak private var checkXLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        doIt()
+    }
+    
+    func doIt() {
+        checkView.clear()
+        checkXView.clear()
         
         checkLabel.text = "Loading"
         checkXLabel.text = "Loading"
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
         checkView.start { () in
             self.checkLabel.text = "Done 🤙"
@@ -35,7 +37,11 @@ class ViewController: UIViewController {
         checkXView.startX { () in
             self.checkXLabel.text = "No 😎"
         }
+        
     }
-
+    
+    @IBAction func reload() {
+        doIt()
+    }
 }
 

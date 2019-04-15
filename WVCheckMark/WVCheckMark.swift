@@ -199,7 +199,7 @@ open class WVCheckMark: UIView {
         createStroke(rect: originalRect)
     }
     
-    fileprivate func clear() {
+    open func clear() {
         if let t = self.layer.sublayers {
             for l in t {
                 if l is CAShapeLayer {
