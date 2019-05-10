@@ -1,5 +1,5 @@
 # WVCheckMark
-Animated checkmark made with CoreAnimation and Swift 3.0
+Animated checkmark made with CoreAnimation and Swift 5.0
 
 ![](https://github.com/wvabrinskas/WVCheckMark/blob/master/gif/out.gif)
 
