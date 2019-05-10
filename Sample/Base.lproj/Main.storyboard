@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxE-nE-ENL" customClass="WVCheckMark" customModule="WVCheckMark">
+                                <rect key="frame" x="123.5" y="170" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="B6C-gH-dlX"/>
+                                    <constraint firstAttribute="width" constant="128" id="bXV-Qb-QyY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2B-Hv-SaQ" customClass="WVCheckMark" customModule="WVCheckMark">
+                                <rect key="frame" x="123.5" y="339" width="128" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ReN-4C-CuL"/>
+                                    <constraint firstAttribute="width" constant="128" id="dOg-YS-Jd6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXN-bp-gOo">
+                                <rect key="frame" x="8" y="139" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-TG-r5f">
+                                <rect key="frame" x="8" y="475" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w94-9K-CVu">
+                                <rect key="frame" x="164" y="607" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="reload" destination="BYZ-38-t0r" eventType="touchUpInside" id="Suj-iO-WEX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oxE-nE-ENL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Rv-Z2-Czr"/>
+                            <constraint firstItem="oxE-nE-ENL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Kkf-LX-2s5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w94-9K-CVu" secondAttribute="bottom" constant="30" id="NuR-nt-o7o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xoh-TG-r5f" secondAttribute="trailing" constant="8" id="U8T-OX-30X"/>
+                            <constraint firstItem="xoh-TG-r5f" firstAttribute="top" secondItem="f2B-Hv-SaQ" secondAttribute="bottom" constant="8" id="aeg-PP-gie"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f2B-Hv-SaQ" secondAttribute="bottom" constant="200" id="bRH-YS-fOB"/>
+                            <constraint firstItem="w94-9K-CVu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="c1p-c1-x1I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w94-9K-CVu" secondAttribute="trailing" constant="164" id="iQC-mz-uiU"/>
+                            <constraint firstItem="f2B-Hv-SaQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jBq-Un-Bag"/>
+                            <constraint firstItem="oxE-nE-ENL" firstAttribute="top" secondItem="JXN-bp-gOo" secondAttribute="bottom" constant="10" id="on1-ei-m31"/>
+                            <constraint firstItem="JXN-bp-gOo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ot1-oV-hA5"/>
+                            <constraint firstItem="xoh-TG-r5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="pZm-7K-yXo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JXN-bp-gOo" secondAttribute="trailing" constant="8" id="qPX-aD-gQL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkLabel" destination="JXN-bp-gOo" id="5lS-ay-J8D"/>
+                        <outlet property="checkView" destination="oxE-nE-ENL" id="cGv-Dp-zfg"/>
+                        <outlet property="checkXLabel" destination="xoh-TG-r5f" id="071-8c-Nir"/>
+                        <outlet property="checkXView" destination="f2B-Hv-SaQ" id="TBl-6E-dvH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
